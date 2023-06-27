@@ -6,7 +6,7 @@
 /*   By: tde-souz <tde-souz@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:39:56 by tde-souz          #+#    #+#             */
-/*   Updated: 2022/07/21 04:11:53 by tde-souz         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:18:49 by tde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,5 +158,13 @@ int		ft_putptr_n(void *ptr, int fd);
 int		ft_puthexlowlong_n(unsigned long n, int fd);
 int		ft_puthexlow_n(unsigned int n, int fd);
 int		ft_puthexup_n(unsigned int n, int fd);
+
+/*
+ *	EXTRA FUNCTIONS
+ */
+
+int		ft_clean(void *ptr, int ret);
+void	ft_throw_error(char *msg, int error_code);
+void	ft_throw_error_simple(int error_code);
 
 #endif

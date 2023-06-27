@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   swapper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-souz <tde-souz@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 19:39:24 by tde-souz          #+#    #+#             */
-/*   Updated: 2022/05/30 19:39:24 by tde-souz         ###   ########.fr       */
+/*   Created: 2022/10/15 10:46:10 by tde-souz          #+#    #+#             */
+/*   Updated: 2022/10/15 10:46:10 by tde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-size_t	ft_strlen(const char *s)
+void	swapper(t_stack **stk)
 {
-	size_t	count;
-
-	count = 0;
-	while (*s++ != 0)
-		count++;
-	return (count);
+	if (!order_check(stk[A]))
+	{
+		sa(stk);
+	}
+	update_cur_position(stk);
 }

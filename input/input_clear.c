@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   input_clear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-souz <tde-souz@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 19:59:06 by tde-souz          #+#    #+#             */
-/*   Updated: 2022/05/30 19:59:06 by tde-souz         ###   ########.fr       */
+/*   Created: 2022/10/15 10:17:07 by tde-souz          #+#    #+#             */
+/*   Updated: 2022/10/15 10:17:07 by tde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	input_clear(char **input)
 {
-	size_t	i;
+	int		i;
 
-	if (dest == 0 && src == 0)
-		return (0);
 	i = 0;
-	if (n > 0)
+	while (input[i])
 	{
-		while (n--)
-		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i++;
-		}
+		free(input[i]);
+		i++;
 	}
-	return (dest);
+	free(input);
 }
